@@ -1,0 +1,495 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Benguiat";
+  src: url(fontes/Benguiat\ Bold.ttf);
+}
+
+html,
+body {
+  overflow-x: hidden !important;
+}
+
+body {
+  background-color: #0c0102;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 4vw;
+  position: absolute;
+  z-index: 9;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  padding: 7vw;
+}
+
+button {
+  background-color: transparent;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  gap: 12px;
+  border: none;
+  outline: none;
+  padding: 10px 0px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 40px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(imagens/bg-footer.webp);
+  background-size: cover;
+  background-position: center;
+
+  .conteudoFooter {
+    display: flex;
+    width: 100%;
+    padding: 7vw;
+  }
+
+  .logoFooter {
+    width: 30%;
+
+    h3 {
+      font-size: 1.5vw;
+      font-weight: 400;
+      letter-spacing: 4px;
+    }
+
+    h2 {
+      font-size: 3.7vw;
+      font-family: "Benguiat";
+    }
+  }
+
+  .secoesFooter {
+    display: flex;
+    flex: 1;
+    justify-content: end;
+    gap: 6%;
+    align-items: end;
+
+    h3 {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
+
+    .social {
+      ul {
+        display: flex;
+        gap: 16px;
+      }
+    }
+  }
+
+  .logotiposFooter {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4vw;
+  }
+
+  .textoInfinito {
+    display: flex;
+    width: max-content;
+    h3 {
+      color: rgba(191, 191, 191);
+      font-size: 12vw;
+      font-family: "Benguiat" sans-serif;
+      mix-blend-mode: color-dodge;
+      animation: textoInfinito 10s infinite linear;
+      padding-left: 8vw;
+    }
+  }
+}
+
+@keyframes textoInfinito {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+#preLoader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #0c0102;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    width: 40vw;
+    height: auto;
+
+    path {
+      fill: rgba(168, 19, 19, 0.364);
+      stroke: rgba(168, 19, 19);
+      stroke-dasharray: 1150;
+      stroke-dashoffset: 1150;
+    }
+  }
+}
+
+.bgMonstro {
+  background-image: url(imagens/bg-sec2.webp);
+  background-position: center;
+  background-size: cover;
+  z-index: 2;
+  position: relative;
+  background-color: #0c0102;
+}
+
+.hero {
+  background-position: 50% 0%;
+  background-size: cover;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7vw 7vw 7vw;
+  position: relative;
+
+  picture {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+    }
+  }
+
+  .esquerda,
+  .direita {
+    width: 30%;
+    z-index: 3;
+  }
+  .esquerda {
+    h3 {
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 4px;
+    }
+
+    h1 {
+      font-size: 3.7vw;
+      font-family: "Benguiat";
+    }
+  }
+
+  .direita {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+    p {
+      font-weight: 400;
+      font-size: 2vw;
+      margin-bottom: 32px;
+      text-align: end;
+    }
+  }
+}
+
+.hero::before {
+  content: "";
+  background: linear-gradient(180deg, rgba(12, 1, 2, 0) 0%, #0c0102 100%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+}
+
+.secaoCidade {
+  flex-direction: column;
+  position: relative;
+
+  .titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .cards {
+    margin-top: 52px;
+    display: flex;
+    justify-content: space-between;
+
+    .card {
+      background-image: url(imagens/card1.webp);
+      width: 32%;
+      aspect-ratio: 16/9;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      padding: 10px 15px;
+    }
+
+    .card:nth-child(2) {
+      background-image: url(imagens/card2.webp);
+    }
+
+    .card:nth-child(3) {
+      background-image: url(imagens/card3.webp);
+    }
+  }
+}
+
+.secaoDepoimentos {
+  flex-direction: column;
+
+  .logotipos {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  .depoimentos {
+    margin-top: 126px;
+    display: flex;
+    justify-content: space-between;
+
+    .depoimento {
+      width: 32%;
+    }
+  }
+}
+
+.secaoAgradecimentos {
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  position: relative;
+  background-color: #0c0102;
+
+  .listas {
+    display: inline-block;
+    width: max-content;
+    .lista {
+      display: inline-flex;
+      animation: textoInfinito 15s infinite linear;
+
+      .cidade {
+        font-size: 12px;
+        margin: 10px;
+      }
+      .cidade:hover {
+        cursor: pointer;
+        color: rgba(168, 19, 19);
+        animation: textoInfinito 0.5s ease linear;
+      }
+    }
+  }
+}
+
+@media (max-width: 1500px) {
+  .secaoCidade {
+    padding: 4vw;
+  }
+}
+
+@media (max-width: 1400px) {
+  .secaoCidade .cards .card {
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+  }
+
+  .secaoAgradecimentos {
+    margin: 40px 0 60px;
+    h2 {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  section {
+    padding: 7vw;
+  }
+  h2 {
+    font-size: 6vw;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 20% 4vw 0;
+
+    .esquerda,
+    .direita {
+      width: 100%;
+    }
+
+    .esquerda {
+      h3,
+      h1 {
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 10vw;
+      }
+    }
+
+    .direita {
+      align-items: start;
+      p {
+        font-size: 5vw;
+        text-align: start;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .secaoCidade {
+    margin-top: 80px;
+    button {
+      display: none;
+    }
+
+    .cards {
+      margin-top: 20px;
+      flex-direction: column;
+      gap: 20px;
+
+      .card {
+        width: 100%;
+      }
+    }
+  }
+
+  .secaoDepoimentos {
+    .logotipos {
+      img:nth-child(1),
+      img:nth-child(3) {
+        width: 20%;
+      }
+      img:nth-child(2) {
+        width: 35%;
+      }
+    }
+    .depoimentos {
+      flex-direction: column;
+      gap: 48px;
+
+      .depoimento {
+        width: 100%;
+      }
+    }
+  }
+
+  .secaoAgradecimentos {
+    margin: 40px 0 60px;
+    h2 {
+      text-align: center;
+    }
+  }
+
+  footer {
+    padding-top: 40px;
+    .conteudoFooter {
+      padding: 4vw;
+      flex-direction: column;
+
+      .logoFooter {
+        width: 100%;
+
+        h2,
+        h3 {
+          text-align: center;
+        }
+        h2 {
+          font-size: 10vw;
+        }
+
+        h3 {
+          font-size: 4vw;
+        }
+      }
+
+      .secoesFooter {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: start;
+
+        h3 {
+          margin-bottom: 5px;
+          font-size: 4.5vw;
+        }
+
+        .social {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin: 40px 0 32px;
+
+          ul {
+            gap: 5px;
+          }
+        }
+
+        .parceiro {
+          width: 50%;
+          img {
+            width: 85%;
+          }
+        }
+
+        .institucional {
+          width: 40%;
+        }
+      }
+    }
+    .logotiposFooter {
+      margin: 30px 0;
+    }
+
+    .textoInfinito h3 {
+      font-size: 18vw;
+    }
+  }
+}
