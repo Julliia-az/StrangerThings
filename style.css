@@ -338,7 +338,7 @@ footer {
   }
 
   .secaoAgradecimentos {
-    margin: 40px 0 60px;
+    padding: 40px 0 60px;
     h2 {
       text-align: center;
     }
@@ -384,7 +384,7 @@ footer {
   }
 
   .secaoCidade {
-    margin-top: 80px;
+    padding: 20px;
     button {
       display: none;
     }
@@ -417,13 +417,6 @@ footer {
       .depoimento {
         width: 100%;
       }
-    }
-  }
-
-  .secaoAgradecimentos {
-    margin: 40px 0 60px;
-    h2 {
-      text-align: center;
     }
   }
 
