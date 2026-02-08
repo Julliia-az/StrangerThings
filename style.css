@@ -312,7 +312,7 @@ footer {
       animation: textoInfinito 15s infinite linear;
 
       .cidade {
-        font-size: 12px;
+        font-size: 1.17em;
         margin: 10px;
       }
       .cidade:hover {
